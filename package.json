@@ -1,0 +1,52 @@
+{
+  "name": "react_template",
+  "version": "0.1.0",
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.8.4",
+    "date-fns": "^2.29.3",
+    "jwt-decode": "^3.1.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.4.0",
+    "react-redux": "^8.0.2",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
+    "react-spinners": "^0.13.4"
+  },
+  "scripts": {
+    "start": "set PORT=2998  && react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@testing-library/react": "^13.4.0",
+    "autoprefixer": "^10.4.12",
+    "msw": "^0.47.3",
+    "postcss": "^8.4.16",
+    "react-test-renderer": "^18.2.0",
+    "redux-mock-store": "^1.5.4",
+    "tailwindcss": "^3.1.8"
+  },
+  "msw": {
+    "workerDirectory": "public"
+  }
+}

@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+/* || VARIABLES */
+:root {
+  /* COLORS */
+  --BGCOLOR: #0F172A;
+  --BORDER-COLOR: #FFF;
+  --COLOR: #FFF;
+  --ERROR: firebrick;
+  --INACTIVE: lightgray;
+  --LINK-COLOR: whitesmoke;
+  --LINK-HOVER: rgba(245, 245, 245, 0.9);
+  --NOTE-BGCOLOR: hsla(240, 64%, 27%, 0.65);
+  --STATUS-COMPLETE: limegreen;
+  --STATUS-OPEN: firebrick;
+  --TABLE-BGCOLOR: #FFF;
+  --TABLE-COLOR: #000;
+  --INPUT-INVALID: #F00;
+}
+/* || GENERAL STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  /* background-color: var(--BGCOLOR); */
+  color: rgb(71 85 105);
+  font-size: 12px;
+  max-height: 100vh;
+  max-width: 100vw;
+  background-image: url('./assets/img/background.jfif');
+  background-size: contain;
+  background-position: top right;
+  background-blend-mode: multiply;
+}
+
+#root{
+  height: 100%;
+  width: 100%;
+/* overflow: hidden; */
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+a {
+  text-decoration: none;
+}
+
+/* || UTILITY CLASSES */
+.icon-button1:hover,
+.icon-button1:focus-visible {
+  transform: scale(1.2);
+}
+
+.icon-button1 {
+  @apply text-blue-800;
+}
+
+.icon-button1[disabled] {
+  visibility: hidden;
+}
+
+.glass {
+  @apply bg-white bg-opacity-30 rounded drop-shadow-lg;
+}
+
+h1 {
+  @apply font-black text-3xl;
+}
+
+h2 {
+  @apply font-bold text-xl;
+}
+.errmsg {
+  display: inline-block;
+  background-color: var(--TABLE-BGCOLOR);
+  color: var(--ERROR);
+  padding: 0.25em;
+  margin-bottom: 0.5em;
+}
