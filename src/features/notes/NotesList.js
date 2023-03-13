@@ -47,7 +47,7 @@ const NotesList = () => {
               <thead className="bg-gray-300">
                 <tr>
                   <th className="border-black border-2 px-2 py-2 w-[14%]">
-                    UserName
+                    Status
                   </th>
                   <th className="border-black border-2 px-2 py-2  w-[18%]">
                     Created

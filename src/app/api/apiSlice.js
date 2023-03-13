@@ -2,17 +2,20 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import { setCredentials } from '../../features/auth/authSlice'
 
 const baseQuery = fetchBaseQuery({
-  baseUrl: "http://localhost:7998",
-  credentials: "include",
+  baseUrl:
+    process.env.NODE_ENV === 'development'
+      ? 'http://localhost:7998'
+      : 'https://cityhospitallabmanagement-api.onrender.com',
+  credentials: 'include',
   prepareHeaders: (headers, { getState }) => {
-    const token = getState().auth.token;
+    const token = getState().auth.token
 
     if (token) {
-      headers.set("authorization", `Bearer ${token}`);
+      headers.set('authorization', `Bearer ${token}`)
     }
-    return headers;
+    return headers
   },
-});
+})
 
 const baseQueryWithReauth = async (args, api, extraOptions) => {
     // console.log(args) // request url, method, body

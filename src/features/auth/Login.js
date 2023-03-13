@@ -105,7 +105,7 @@ const Login = () => {
                     type="text"
                     ref={userRef}
                     className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                    placeholder="Email address"
+                    placeholder="UserName: input 'admin' here"
                     onChange={handleUserInput}
                   />
                 </div>
@@ -114,7 +114,7 @@ const Login = () => {
                   <input
                     type="password"
                     className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                    placeholder="Password"
+                    placeholder="Password: input '!Hh12345' here"
                     onChange={handlePwdInput}
                   />
                 </div>

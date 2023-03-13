@@ -2,6 +2,7 @@
   "name": "react_template",
   "version": "0.1.0",
   "dependencies": {
+    "@fvilers/disable-react-devtools": "^1.3.0",
     "@reduxjs/toolkit": "^1.8.4",
     "date-fns": "^2.29.3",
     "jwt-decode": "^3.1.2",
