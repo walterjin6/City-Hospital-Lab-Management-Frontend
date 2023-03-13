@@ -55,7 +55,7 @@ const Login = () => {
     const handleSubmit1 = async (e) => {
         e.preventDefault()
         try {
-            const { accessToken } = await login({ username: "VISITOR", password: "111" }).unwrap()
+            const { accessToken } = await login({ username: "admin", password: "!Hh12345" }).unwrap()
             dispatch(setCredentials({ accessToken }))
             setUsername('')
             setPassword('')
@@ -127,7 +127,7 @@ const Login = () => {
                       id="exampleCheck3"
                     />
                     <label
-                      className="form-check-label inline-block text-gray-800"
+                      className="form-check-label inline-block text-gray-800 font-bold"
                       htmlFor="exampleCheck2"
                     >
                       Remember me
