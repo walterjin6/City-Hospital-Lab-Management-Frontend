@@ -17,7 +17,7 @@ const Welcome = () => {
     const today = new Intl.DateTimeFormat('en-US', { dateStyle: 'full', timeStyle: 'long' }).format(date)
 
     const content = (
-      <div className="flex justify-center items-center  h-screen w-full">
+      <div className="flex justify-center items-center  h-full w-full">
         <div className="font-black gap-4 text-red-600 flex flex-col justify-start items-center w-[30%]   ">
           <h1>~ Welcome ~</h1>
           <h1> {username}</h1>

@@ -4,9 +4,9 @@ import DashFooter from './DashFooter'
 
 const DashLayout = () => {
     return (
-      <div className='w-full  h-screen overflow-y-auto flex flex-col justify-between '>
-        <DashHeader className=' ' />
-        <div className='flex-grow h-full overflow-y-auto'>
+      <div className='w-full  h-screen  flex flex-col justify-between '>
+        <DashHeader className='' />
+        <div className='overflow-y-auto'>
           <Outlet />
         </div>
         <DashFooter className=' ' />
