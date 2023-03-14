@@ -6,7 +6,6 @@ import { AiFillFileAdd } from "react-icons/ai";
 import { AiTwotoneSetting } from "react-icons/ai";
 import { IoMdPersonAdd } from "react-icons/io";
 
-
 const Welcome = () => {
 
     const { username, isManager, isAdmin } = useAuth()
