@@ -80,7 +80,7 @@ const Login = () => {
 
     const errClass = errMsg ? "errmsg" : "offscreen"
 
-    if (isLoading) return <PulseLoader color={"#FFF"} />
+    if (isLoading) return <div className='w-full h-screen flex justify-center items-center '><PulseLoader color={'#808080'} size={100} /></div>
 
     const content = (
       <section className="h-screen">

@@ -20,7 +20,7 @@ const UsersList = () => {
 
     let content
 
-    if (isLoading) content = <PulseLoader color={"#FFF"} />
+    if (isLoading) content = <div className='w-full h-screen flex justify-center items-center '><PulseLoader color={'#808080'} size={100} /></div>
 
     if (isError) {
         content = <p className="errmsg">{error?.data?.message}</p>

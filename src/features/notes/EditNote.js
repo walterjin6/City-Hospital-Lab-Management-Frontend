@@ -7,35 +7,39 @@ import PulseLoader from 'react-spinners/PulseLoader'
 import useTitle from '../../hooks/useTitle'
 
 const EditNote = () => {
-    useTitle('techNotes: Edit Note')
+  useTitle('techNotes: Edit Note')
 
-    const { id } = useParams()
+  const { id } = useParams()
 
-    const { username, isManager, isAdmin } = useAuth()
+  const { username, isManager, isAdmin } = useAuth()
 
-    const { note } = useGetNotesQuery("notesList", {
-        selectFromResult: ({ data }) => ({
-            note: data?.entities[id]
-        }),
-    })
+  const { note } = useGetNotesQuery('notesList', {
+    selectFromResult: ({ data }) => ({
+      note: data?.entities[id],
+    }),
+  })
 
-    const { users } = useGetUsersQuery("usersList", {
-        selectFromResult: ({ data }) => ({
-            users: data?.ids.map(id => data?.entities[id])
-        }),
-    })
+  const { users } = useGetUsersQuery('usersList', {
+    selectFromResult: ({ data }) => ({
+      users: data?.ids.map((id) => data?.entities[id]),
+    }),
+  })
 
-    if (!note || !users?.length) return <PulseLoader color={"#FFF"} />
+  if (!note || !users?.length)
+    return (
+      <div className='w-full h-screen flex justify-center items-center '>
+        <PulseLoader color={'#808080'} size={100} />
+      </div>
+    )
 
-
-    if (!isManager && !isAdmin) {
-        if (note.username !== username) {
-            return <p className="errmsg">No access</p>
-        }
+  if (!isManager && !isAdmin) {
+    if (note.username !== username) {
+      return <p className='errmsg'>No access</p>
     }
+  }
 
-    const content = <EditNoteForm note={note} users={users} />
+  const content = <EditNoteForm note={note} users={users} />
 
-    return content
+  return content
 }
 export default EditNote
