@@ -12,7 +12,7 @@ const Public = () => {
         <SiBandlab className='text-red-700' />
         <h1 className=''>City Hospital Laboratory</h1>
       </header>
-      <div className='flex justify-between items-center w-full px-16 py-1'>
+      <div className='flex justify-center items-center w-full px-16 py-1'>
         <div className='glass grid place-items-center w-[40%] px-8 py-4'>
           <p className='font-boldflex flex-col justify-start w-full  text-xl  '>
             <h1 className='w-full font-bold mb-2 text-white bg-blue-600 text-2xl round px-2 py-1'>
