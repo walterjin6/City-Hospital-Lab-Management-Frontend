@@ -5,7 +5,7 @@ const baseQuery = fetchBaseQuery({
   baseUrl:
     process.env.NODE_ENV === 'development'
       ? 'http://localhost:7998'
-      : 'https://cityhospitallabmanagement-api.onrender.com',
+      : 'https://hospitallabmanager-api.onrender.com',
   credentials: 'same-origin',
   prepareHeaders: (headers, { getState }) => {
     const token = getState().auth.token
