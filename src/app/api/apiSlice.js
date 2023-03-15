@@ -6,7 +6,7 @@ const baseQuery = fetchBaseQuery({
     process.env.NODE_ENV === 'development'
       ? 'http://localhost:7998'
       : 'https://hospitallabmanager-api.onrender.com',
-  credentials: 'same-origin',
+  credentials: 'include',
   prepareHeaders: (headers, { getState }) => {
     const token = getState().auth.token
 
