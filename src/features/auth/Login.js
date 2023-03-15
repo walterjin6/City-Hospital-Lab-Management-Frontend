@@ -52,10 +52,10 @@ const Login = () => {
             errRef.current.focus();
         }
     }
-    const handleSubmit1 = async (e) => {
+  const handleGuestPortal = async (e) => {
         e.preventDefault()
         try {
-            const { accessToken } = await login({ username: "admin", password: "!Hh12345" }).unwrap()
+            const { accessToken } = await login({ username: "Guest", password: "!Hh12345" }).unwrap()
             dispatch(setCredentials({ accessToken }))
             setUsername('')
             setPassword('')
@@ -87,16 +87,7 @@ const Login = () => {
         <div className="container px-6 py-12 h-full">
           <div className="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
             <div className="md:w-8/12 lg:w-5/12 lg:ml-20">
-              <button
-                type="submit"
-                className="w-full inline-block px-7 py-3 bg-yellow-600 text-white font-black text-xl leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
-                data-mdb-ripple="true"
-                data-mdb-ripple-color="light"
-                onClick={handleSubmit1}
-              >
-                DEMO VISITOR LOGIN
-              </button>
-              <header className="w-full text-center text-xl font-black bg-clip-padding py-8">
+               <header className="w-full text-center text-xl font-black bg-clip-padding py-8">
                 Employee Login
               </header>
               <form onSubmit={handleSubmit}>
@@ -142,6 +133,16 @@ const Login = () => {
                   data-mdb-ripple-color="light"
                 >
                   Sign in
+                </button>
+                <span className='py-4 font-bold'>Not registered? Click guest portal below for login-free</span>
+                <button
+                  type='submit'
+                  className='w-full inline-block px-7 py-3 bg-yellow-600 text-white font-bold text-xl leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out'
+                  data-mdb-ripple='true'
+                  data-mdb-ripple-color='light'
+                  onClick={handleGuestPortal}
+                >
+                  Guest Portal - Login Free
                 </button>
               </form>
               <footer className="w-full text-center text-xl font-black bg-clip-padding py-8 underline underline-offset-2">
