@@ -96,7 +96,7 @@ const Login = () => {
                     type="text"
                     ref={userRef}
                     className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                    placeholder="UserName: input 'admin' here"
+                    placeholder="UserName: input 'Guest' for guests"
                     onChange={handleUserInput}
                   />
                 </div>
@@ -105,7 +105,7 @@ const Login = () => {
                   <input
                     type="password"
                     className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                    placeholder="Password: input '!Hh12345' here"
+                    placeholder="Password: input '!Hh12345' for guests"
                     onChange={handlePwdInput}
                   />
                 </div>
@@ -121,7 +121,7 @@ const Login = () => {
                       className="form-check-label inline-block text-gray-800 font-bold"
                       htmlFor="exampleCheck2"
                     >
-                      Remember me
+                      Trust This Device
                     </label>
                   </div>
                 </div>
